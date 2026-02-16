@@ -3,8 +3,6 @@
 Classical Computer Vision pipeline for detecting prohibited objects in X-ray baggage images using handcrafted features and XGBoost classification.  
 This project was developed for the Kaggle competition **"Object Detection in Baggage using Classic Computer Vision"**, where deep learning is not allowed.
 
----
-
 ## 📌 Overview
 
 This project implements a complete object detection system using traditional computer vision techniques.
@@ -27,8 +25,6 @@ The system uses:
 - Handcrafted feature extraction
 - XGBoost multi-class classification
 - Hard Negative Mining for improved accuracy
-
----
 
 ## 🧠 Pipeline Architecture
 
@@ -62,8 +58,6 @@ Combination of complementary handcrafted features:
 
 - Global Non-Maximum Suppression
 
----
-
 ## 📂 Dataset
 
 The dataset consists of X-ray .png images of baggage with annotated bounding boxes for 6 classes of dangerous objects.
@@ -87,8 +81,6 @@ xray_data/
 | Validation | 900 | 1320 |
 | Test | 900 | 1321 |
 
----
-
 ### Label format (YOLO format)
 
 class_id x_center y_center width height
@@ -96,8 +88,6 @@ class_id x_center y_center width height
 Example: 2 0.903688 0.588403 0.033612 0.134967
 
 Coordinates are normalized between 0 and 1.
-
----
 
 ## 📏 Evaluation Metric
 
@@ -116,8 +106,6 @@ Key properties:
 - Extra predictions → penalty  
 - Wrong class → IoU = 0  
 
----
-
 ## 📤 Submission Format
 
 CSV format:
@@ -128,8 +116,6 @@ PID_xray_00638,"[[2,0.4,0.6,0.15,0.15]]"
 PID_xray_00663,"[]"
 
 Bounding box format: [class_id, center_x, center_y, width, height]
-
----
 
 ## 🏆 Competition
 
